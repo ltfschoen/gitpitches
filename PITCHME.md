@@ -6,9 +6,24 @@
 
 1. Visually design classes and relationships
 2. Communicate DB structure with team
-3. Implementation versions in code. Translate entities into classes
+3. Implementation versions in code. Translate Entities into classes
 4. Migrate DB schema into DB tables
 5. [Link](creately.com/blog/diagrams/uml-diagram-types-examples/) (UML Diagram different types)
+
+---
+
+### What Entities and Attributes to use?
+
+1. Generate User Stories
+  * *As any user I can view a list of users*
+  * *As any user I can view a list of tweets from any user profile*
+  * *As any user I can edit any user*
+  * *As any user I can destroy any user*
+2. Identify Entities and Attributes
+  * Users, Tweets
+3. Identify Relationships between Entities
+  * *User has many Tweets*
+  * *Tweets belong to User*
 
 ---
 
