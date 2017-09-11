@@ -211,6 +211,10 @@ Twitter DB Model
   }
   ```
 
+![Press Down Key](assets/down-arrow.png)
+
++++
+
 Twitter Users List Images
 ![Image-Absolute](assets/twitter_users_list_images.png)
 
