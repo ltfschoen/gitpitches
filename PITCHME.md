@@ -211,8 +211,8 @@ Twitter DB Model
   }
   ```
 
-  Twitter Users List Images
-  ![Image-Absolute](assets/twitter_users_list_images.png)
+Twitter Users List Images
+![Image-Absolute](assets/twitter_users_list_images.png)
 
 ---
 
