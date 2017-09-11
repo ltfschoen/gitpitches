@@ -17,12 +17,17 @@
 1. Sign-up to [Creatly](https://creately.com)
 2. Create “Entity Relationship Diagram” schema Template.
 3. Read ERD tutorial. [Link](creately.com/blog/diagrams/er-diagrams-tutorial/)
+
+![Press Down Key](assets/down-arrow.png)
+
++++
+
 4. Determine CRUD Resources
 *User has many Tweets. Tweets belong to User.*
 
 Twitter ERD
 ![Image-Absolute](assets/twitter_erd.png)
-<br><br>
+
 ---
 
 ### How to do "relational" DB Modelling?
@@ -53,6 +58,11 @@ Twitter DB Model
   ```bash
   open -a "Google Chrome" http://localhost:3000/pages/home
   ```
+
+![Press Down Key](assets/down-arrow.png)
+
++++
+
 4. Review routes
   ```bash
   rails routes
@@ -74,12 +84,22 @@ Twitter DB Model
     --javascript-engine=js
   ```
 2. Controller generated with `before_action`, which executes a given method (i.e. `set_event`) before specified Actions (i.e. `index, new, create, show, update, edit, destroy`). [Link](http://guides.rubyonrails.org/action_controller_overview.html)
+
+![Press Down Key](assets/down-arrow.png)
+
++++
+
 3. Controller generated with Whitelisted (aka [Strong Parameters](http://edgeguides.rubyonrails.org/action_controller_overview.html#strong-parameters)). Security to protect updating sensitive Model attributes
 4. Model created
 5. Routes `resources :users`
+
+![Press Down Key](assets/down-arrow.png)
+
++++
+
 6. [ActiveRecord Migration](http://edgeguides.rubyonrails.org/active_record_migrations.html) generates different versions of DB Schema using Ruby DSL instead of raw SQL. ActiveRecord version control history structure of DB stored in `schema.rb`. Default primary key column `id` added implicitly and timestamps for `created_at` and `updated_at` (updated by Active Record).
   * Note: Before Migration no User table exists in DB
-  * Note: After Migration reversal with Active Record using `rollback` to remove the User table from the DB
+  * Note: After Migration reversal with Active Record using `rollback` to remove User table from DB
   * Note: `up` and `down` may be used instead of `change`
 
 ---
@@ -101,6 +121,11 @@ Twitter DB Model
   SELECT * FROM users;
   \q
   ```
+
+![Press Down Key](assets/down-arrow.png)
+
++++
+
 3. Drop DB
   ```bash
   rails db:drop
@@ -120,7 +145,6 @@ Twitter DB Model
   ```
 2. Create New User in Browser
 
-
 ---
 
 ### Add Migration to Update User Table with Image Attribute
@@ -133,6 +157,8 @@ Twitter DB Model
   ```bash
   rails db:migrate
   ```
+
+---
 
 ### Migrate Seed Data
 
@@ -151,6 +177,11 @@ Twitter DB Model
     image: 'https://i.pinimg.com/736x/aa/e5/a7/aae5a7c98714612266776238b05a1582--art-challenge-dr-suess.jpg'
   )
   ```
+
+![Press Down Key](assets/down-arrow.png)
+
++++
+
 2. Migrate Seed Data
   ```bash
   rails console;
@@ -161,6 +192,8 @@ Twitter DB Model
   User.count;
   User.all.first;
   ```
+
+---
 
 ### Update Front-End User List View using Embedded Ruby
 
@@ -181,6 +214,8 @@ Twitter DB Model
   Twitter Users List Images
   ![Image-Absolute](assets/twitter_users_list_images.png)
 
+---
+
 ### Add Tweets Scaffold
 
 1. Update /views/users/index.html.erb
@@ -188,6 +223,8 @@ Twitter DB Model
   rails g scaffold Tweet message:string user_id:integer
   rails db:migrate
   ```
+
+---
 
 ### Add ActiveRecord Model Associations. Update Seeds. Experiment with Associations in Rails Console
 
@@ -201,6 +238,10 @@ Twitter DB Model
     belongs_to :user
   end
   ```
+
+![Press Down Key](assets/down-arrow.png)
+
++++
 
 2. Update Seeds
   ```ruby
@@ -221,6 +262,11 @@ Twitter DB Model
     user_id: 2
   )
   ```
+
+![Press Down Key](assets/down-arrow.png)
+
++++
+
 3. Migrate Updated Seeds
   ```bash
   rails db:seed
@@ -232,8 +278,14 @@ Twitter DB Model
   \c twitterclone_development
   \d
   DROP TABLE users;
-  DROP TABLE tweets
+  DROP TABLE tweets;
+  ```
 
+![Press Down Key](assets/down-arrow.png)
+
++++
+
+  ```bash
   CREATE TABLE users
   (
    id SERIAL4 PRIMARY KEY,
@@ -242,15 +294,28 @@ Twitter DB Model
    email VARCHAR(255),
    image VARCHAR(255)
   );
+
   CREATE TABLE tweets
   (
    id SERIAL4 PRIMARY KEY,
    message TEXT,
    user_id SERIAL4 references users(id)
   );
+  ```
+
+![Press Down Key](assets/down-arrow.png)
+
++++
+
+  ```bash
   INSERT INTO users (username, password, email, image) VALUES ('kermit', 'kermy', 'kerm@it.com','http://cdn.heftig.co/wp-content/uploads/2015/05/65ae356f64281952741c683297edbcb6.jpg');
+  
   INSERT INTO tweets (message, user_id) VALUES ('nice twitter clone',1);
   ```
+
+![Press Down Key](assets/down-arrow.png)
+
++++
 
 4. Experiment with Associations in Rails Console
   ```ruby
@@ -262,6 +327,8 @@ Twitter DB Model
   tweet1.user
   tweet1.user = user1
   ```
+
+---
 
 ### References
 
