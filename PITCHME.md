@@ -358,7 +358,7 @@ Twitter Users List Images
     <strong>Tweets:</strong>
     <% @user.tweets.each do |tweet| %>
       <ul>
-        <li><%= tweet.message %></li>
+        <li><%= tweet.message %> | <%= tweet.updated_at %></li>
       </ul>
     <% end %>
   </p>
