@@ -350,7 +350,7 @@ Twitter Users List Images
 
 +++
 
-4. Experiment with Associations in Rails Console
+4. Experiment with Associations in Rails Console. Save updates to DB
   ```ruby
   user1 = User.first
   user1.tweets
@@ -359,6 +359,18 @@ Twitter Users List Images
   tweet1 = Tweet.new(id: 1000, message: "eeep")
   tweet1.user
   tweet1.user = user1
+  tweet1.save
+  ```
+
+  ![Press Down Key](assets/down-arrow.png)
+
+  +++
+
+5. Experiment with other Queries in Rails Console.
+  ```ruby
+  users = User.all # User.find_each
+  users = User.where(username:"luke").order(created_at: :desc)
+  user1 = User.find(1)
   ```
 
 ---
