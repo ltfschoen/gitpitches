@@ -350,6 +350,22 @@ Twitter Users List Images
 
 ---
 
+### Update User Profile view with their Tweets
+
+1. Display List of User Tweets. Update /views/users/show.html.erb
+  ```ruby
+  <p>
+    <strong>Tweets:</strong>
+    <% @user.tweets.each do |tweet| %>
+      <ul>
+        <li><%= tweet.message %></li>
+      </ul>
+    <% end %>
+  </p>
+  ```
+
+---
+
 ### References
 
 * [Gitpitch](https://github.com/gitpitch/gitpitch)
