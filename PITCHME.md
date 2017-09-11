@@ -15,15 +15,13 @@
 ### What Entities and Attributes to use?
 
 1. Generate User Stories
-  * *As any user I can view a list of users*
-  * *As any user I can view a list of tweets from any user profile*
-  * *As any user I can edit any user*
-  * *As any user I can destroy any user*
-2. Identify Entities and Attributes
-  * Users, Tweets
+  * *As user I can view list of users*
+  * *As user I can view list of tweets from a user*
+  * *As user I can edit user*
+  * *As user I can destroy user*
+2. Identify Entities and Attributes - **Users, Tweets**
 3. Identify Relationships between Entities
-  * *User has many Tweets*
-  * *Tweets belong to User*
+  * *User has many Tweets*, *Tweets belong to User*
 
 ---
 
