@@ -1,6 +1,8 @@
-### Blog
+## Twitter Clone
 
-<span style="font-size:1.2em;">Why use UML diagrams?</span>
+* [Gitpitch URL](https://gitpitch.com/ltfschoen/gitpitches/twitter_mvc)
+
+### Why use UML diagrams?
 
 1. Visually design classes and relationships
 2. Communicate DB structure with team
@@ -20,7 +22,7 @@
 
 Twitter ERD
 ![Image-Absolute](assets/twitter_erd.png)
-
+<br><br>
 ---
 
 ### How to do "relational" DB Modelling?
@@ -118,7 +120,6 @@ Twitter DB Model
   ```
 2. Create New User in Browser
 
----
 
 ---
 
