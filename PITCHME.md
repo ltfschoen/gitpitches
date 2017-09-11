@@ -220,6 +220,22 @@ Twitter Users List Images
 
 ---
 
+### [Customise Generators Scaffolding Workflow](http://guides.rubyonrails.org/generators.html#customizing-your-workflow)
+
+1. Add Configuration Options to /config/application.rb to use:
+  ```ruby
+  config.generators do |g|
+    g.orm             :active_record
+    g.template_engine :erb                      # i.e. haml, slim
+    g.javascript_engine :js                     # i.e. coffee
+    g.stylesheet_engine :sass                   # i.e. css, less
+    g.test_framework  :test_unit, fixture: true
+  end
+  ```
+  * Benefits: Flags not necessary (i.e. `--javascript-engine=js`)
+
+---
+
 ### Add Tweets Scaffold
 
 1. Update /views/users/index.html.erb
@@ -313,7 +329,7 @@ Twitter Users List Images
 
   ```bash
   INSERT INTO users (username, password, email, image) VALUES ('kermit', 'kermy', 'kerm@it.com','http://cdn.heftig.co/wp-content/uploads/2015/05/65ae356f64281952741c683297edbcb6.jpg');
-  
+
   INSERT INTO tweets (message, user_id) VALUES ('nice twitter clone',1);
   ```
 
