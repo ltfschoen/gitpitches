@@ -150,6 +150,19 @@ Twitter DB Model
 
 ---
 
+### Rails Console and DB Console
+
+* Open Rails Console (use `rails c --sandbox` to [not save changes](http://guides.rubyonrails.org/command_line.html))
+  ```bash
+  rails console
+  ```
+* Open DB Console (uses configuration in database.yml)
+  ```bash
+  rails db
+  ```
+
+---
+
 ### List View of Users and Create User
 
 1. Go to link below to load /views/users/index.html.erb. Observe Server logs and [Convention over Configuration](http://rubyonrails.org/doctrine/):
